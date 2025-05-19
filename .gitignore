@@ -1,0 +1,6 @@
+*.img
+*/venv/*
+venv/
+misc/*
+*.png
+*.pth
