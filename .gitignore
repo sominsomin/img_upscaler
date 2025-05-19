@@ -4,3 +4,4 @@ venv/
 misc/*
 *.png
 *.pth
+*/__pycache__/*
