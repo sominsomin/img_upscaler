@@ -9,7 +9,7 @@ class ImageUpscalerCNN(nn.Module):
             nn.ReLU(),
             nn.Conv2d(64, 64, kernel_size=3, padding=1),
             nn.ReLU(),
-            nn.Upsample(scale_factor=SCALING_FACTOR, mode='bilinear', align_corners=False),  # 4x upscaling
+            nn.Upsample(scale_factor=SCALING_FACTOR, mode='bilinear', align_corners=False),
             nn.Conv2d(64, 3, kernel_size=3, padding=1)
         )
 

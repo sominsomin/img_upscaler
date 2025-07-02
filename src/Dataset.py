@@ -9,7 +9,7 @@ from setting import INPUT_WIDTH, INPUT_HEIGHT, SCALING_FACTOR
 class ImageDataset(Dataset):
     def __init__(self, data_dir, transform_lr, transform_hr):
         self.data_dir = data_dir
-        self.images = os.listdir(data_dir)[0:10]
+        self.images = os.listdir(data_dir)
         self.transform_lr = transform_lr
         self.transform_hr = transform_hr
 
@@ -23,7 +23,6 @@ class ImageDataset(Dataset):
         lr_img = self.transform_lr(img)
         return lr_img, hr_img
 
-# Image transformations for LR and HR images
 transform_lr = T.Compose([
     T.Resize((INPUT_WIDTH, INPUT_HEIGHT)),
     T.ToTensor()

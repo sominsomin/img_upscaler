@@ -9,7 +9,7 @@ from Dataset import ImageDataset, transform_lr, transform_hr
 model = ImageUpscalerCNN()
 
 model.load_state_dict(torch.load("upscaler_model.pth"))
-model.eval()  # Set to evaluation mode
+model.eval() 
 
 dataset = ImageDataset("data/DIV2K_train_HR", transform_lr, transform_hr)
 
