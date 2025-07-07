@@ -3,7 +3,7 @@ import torchvision.transforms as T
 from PIL import Image
 import os
 
-from setting import INPUT_WIDTH, INPUT_HEIGHT, SCALING_FACTOR
+from settings import INPUT_WIDTH, INPUT_HEIGHT, SCALING_FACTOR
 
 
 class ImageDataset(Dataset):

@@ -1,8 +1,7 @@
 import torch.nn as nn
-from setting import SCALING_FACTOR
 
 class ImageUpscalerCNN(nn.Module):
-    def __init__(self):
+    def __init__(self, SCALING_FACTOR=2):
         super(ImageUpscalerCNN, self).__init__()
         self.model = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=5, padding=2),

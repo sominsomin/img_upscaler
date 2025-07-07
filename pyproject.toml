@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-upscaler-cnn"
+version = "0.1.0"
+description = "Image upscaler using PyTorch"
+requires-python = ">=3.11"
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "Pillow",
+]
+
+[project.scripts]
+image_upscaler_cnn = "image_upscaler_cnn.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["image_upscaler_cnn"]
+
+[tool.setuptools.package-data]
+image_upscaler_cnn = ["model_file/*.pth"]
