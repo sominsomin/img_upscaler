@@ -1,7 +1,9 @@
 # About
 
 A simple ImageUpscaler built with pytorch. This comes as an installable package with a pretrained model to upscale by 2x. 
+
 There are also scripts related to training in [training/](training/).
+
 I have used an open source dataset from [here](https://data.vision.ee.ethz.ch/cvl/DIV2K/) for the training.
 
 # Installation
@@ -26,9 +28,9 @@ Once the image-upscaler package is installed, you can upscale an image from your
 ````
 image_upscaler_cnn input_image.png output_image_2x.png
 ````
-Replace input_image.png with the path to your input image and output_image_2x.png with your desired output file name.
+Replace `input_image.png` with the path to your input image and `output_image_2x.png` with your desired output file name.
 
-A Note on performance:
+A note on performance:
 The bundled model was trained on (500,500) pixel images. While the model architecture is agnostic to specific input image sizes, its performance (generalization) is best on images around this training dimension. For larger or smaller images, retraining the model on more diverse or representative data might yield better results.
 
 # Approach
