@@ -21,9 +21,13 @@ def main():
         T.ToTensor(),
     ])
     input_tensor = preprocess(input_image).unsqueeze(0)
+    print(f"Upscaling image {args.input_file}")
+
     upscaled_image = upscale_image(input_tensor)
     pil_image = T.ToPILImage()(upscaled_image.squeeze(0).cpu().clip(0, 1))
     pil_image.save(args.output_file)
+
+    print(f"Upscaled image saved to {args.output_file}")
 
 
 def upscale_image(input_tensor):
