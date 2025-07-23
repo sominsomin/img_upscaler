@@ -8,12 +8,12 @@ from settings import INPUT_WIDTH, INPUT_HEIGHT, SCALING_FACTOR
 
 model = ImageUpscalerCNN()
 
-model.load_state_dict(torch.load("training/models/upscaler_model_2x_w_500_h_500_epoch_2_loss_0.0014.pth"))
+model.load_state_dict(torch.load("training/models/upscaler_model_2x_w_500_h_500_epoch_4_loss_0.0010.pth"))
 model.eval() 
 dataset = ImageDataset("data/DIV2K_valid_HR", transform_lr, transform_hr)
 criterion = nn.MSELoss()
 
-i = 20
+i = 25
 
 resize_transform = transforms.Resize((INPUT_WIDTH*SCALING_FACTOR, INPUT_HEIGHT*SCALING_FACTOR))
 
